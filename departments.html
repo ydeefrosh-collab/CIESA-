@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments • Faculty of Computer & Information Engineering | FUOYE</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="ciesalogo.jpg" alt="FUOYE Logo" class="uni-logo">
+        <div class="uni-info">
+          <h1>Federal University of Oye-Ekiti</h1>
+          <p>Faculty of Computer & Information Engineering (CIE)</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="departments.html" class="active">Departments</a></li>
+        <li><a href="staff.html">Staff Directory</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="executives.html">Faculty Executives</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="departments.html" class="active">Departments</a>
+    <a href="staff.html">Staff Directory</a>
+    <a href="news.html">News & Events</a>
+    <a href="resources.html">Resources</a>
+    <a href="executives.html">Faculty Executives</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero departments-hero">
+    <div class="hero-content">
+      <h1>Departments in CIE</h1>
+      <p>Explore the three departments that make up the Faculty of Computer & Information Engineering.</p>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS SECTION -->
+  <section class="departments-section">
+    <div class="departments-container">
+      <div class="department-card">
+        <h3>Computer Engineering (CPE)</h3>
+        <p>Focuses on computer hardware, embedded systems, and integration of software and hardware solutions.</p>
+      </div>
+      <div class="department-card">
+        <h3>Systems Engineering (SYE)</h3>
+        <p>Deals with the design, integration, and management of complex engineering systems.</p>
+      </div>
+      <div class="department-card">
+        <h3>Information & Communication Engineering (ICE)</h3>
+        <p>Focuses on telecommunications, networking, and efficient transfer of information across systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Federal University of Oye-Ekiti</p>
+      <p>Faculty of Computer & Information Engineering (CIE)</p>
+      <p>CIESA — Computer & Information Engineering Students Association</p>
+    </div>
+  </footer>
+
+
+
+
+<style>
+  /* =========================================================
+   GLOBAL STYLES & THEME COLORS
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #006400;       /* FUOYE dark green */
+  --accent: #00a300;        /* Bright green for hovers */
+  --white: #ffffff;
+  --text-dark: #1b1b1b;
+  --light-bg: #f6fff6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s ease;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   NAVIGATION BAR
+========================================================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 0;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO + UNIVERSITY INFO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: fadeInLeft 1.2s ease;
+}
+
+.uni-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--white);
+  object-fit: contain;
+  padding: 4px;
+  animation: spin 6s linear infinite;
+}
+
+.uni-info h1 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.uni-info p {
+  font-size: 0.8rem;
+  color: #d6ffd6;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #dfffdf;
+  transform: scale(1.05);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: var(--primary);
+  padding: 90px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: var(--transition);
+  z-index: 90;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.mobile-nav a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+  margin-top: 70px;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: slideDown 1.5s ease;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 35px auto;
+  font-size: 1rem;
+  color: #ecffec;
+  animation: fadeInUp 2.3s ease;
+}
+
+/* HERO BACKGROUNDS PER PAGE */
+.hero.departments-hero {
+  background: linear-gradient(
+      rgba(0, 100, 0, 0.85),
+      rgba(0, 100, 0, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80") 
+    no-repeat center/cover;
+}
+
+/* =========================================================
+   DEPARTMENTS SECTION
+========================================================= */
+.departments-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.departments-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.department-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: var(--transition);
+  animation: floatCard 3s ease-in-out infinite alternate;
+}
+
+.department-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.department-card p {
+  font-size: 0.95rem;
+}
+
+.department-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 100, 0, 0.3);
+  background: linear-gradient(145deg, #fafff9, #e6ffe6);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 60px;
+  animation: fadeInUp 1.5s ease;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseText {
+  0% { text-shadow: 0 0 5px var(--primary); }
+  100% { text-shadow: 0 0 20px var(--accent); }
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .department-card {
+    padding: 20px;
+  }
+}
+</style>
+  <!-- SCRIPT -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About • Faculty of Computer & Information Engineering | FUOYE</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="ciesalogo.jpg" alt="FUOYE Logo" class="uni-logo">
+        <div class="uni-info">
+          <h1>Federal University of Oye-Ekiti</h1>
+          <p>Faculty of Computer & Information Engineering (CIE)</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="staff.html">Staff Directory</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="executives.html">Faculty Executives</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="departments.html">Departments</a>
+    <a href="staff.html">Staff Directory</a>
+    <a href="news.html">News & Events</a>
+    <a href="resources.html">Resources</a>
+    <a href="executives.html">Faculty Executives</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero about-hero">
+    <div class="hero-content">
+      <h1>About the Faculty of Computer & Information Engineering</h1>
+      <p>Learn about our mission, vision, and how we empower students to excel in technology and innovation.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-section">
+    <div class="about-container">
+      <h2>Our Mission</h2>
+      <p>The Faculty of Computer & Information Engineering at FUOYE aims to provide top-notch education and research opportunities in the field of computing and information technology. We focus on preparing students for both professional excellence and societal impact.</p>
+
+      <h2>Our Vision</h2>
+      <p>To be a leading center of excellence in computer and information engineering education, research, and innovation, contributing to technological advancement both nationally and globally.</p>
+
+      <h2>What We Offer</h2>
+      <ul>
+        <li>High-quality undergraduate and postgraduate programs</li>
+        <li>Modern laboratories and research facilities</li>
+        <li>Strong collaboration with industry and technology partners</li>
+        <li>Active student association (CIESA) and vibrant community</li>
+      </ul>
+
+      <h2>Why Choose CIE at FUOYE?</h2>
+      <p>Our faculty provides a balance of academic excellence, practical experience, and community engagement. Students gain hands-on knowledge, access to research projects, and opportunities to participate in national and international competitions.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Federal University of Oye-Ekiti</p>
+      <p>Faculty of Computer & Information Engineering (CIE)</p>
+      <p>CIESA — Computer & Information Engineering Students Association</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+
+<style>
+  /* =========================================================
+   GLOBAL STYLES & THEME COLORS
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: #006400;    /* Dark Green */
+  --secondary: #FFD700;  /* Gold */
+  --accent: #FFFF00;     /* Yellow */
+  --light-bg: #f9f9f9;
+  --dark-text: #222;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+body {
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+nav {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.uni-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.uni-info h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.uni-info p {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--secondary);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE NAVIGATION */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary);
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  left: 0;
+}
+
+.mobile-nav a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-container h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-container ul {
+  list-style: disc inside;
+  margin-bottom: 2rem;
+}
+
+.about-container ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* =========================================================
+   MEDIA QUERIES
+========================================================= */
+@media screen and (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.3rem;
+  }
+}
+</style>
+</body>
+</html>

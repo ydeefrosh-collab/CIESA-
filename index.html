@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty of Computer & Information Engineering • FUOYE</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="Ciesalogo.jpg" alt="FUOYE Logo" class="uni-logo">
+        <div class="uni-info">
+          <h1>Federal University of Oye-Ekiti</h1>
+          <p>Faculty of Computer & Information Engineering (CIE)</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="#">Staff Directory</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Faculty Executives</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="departments.html">Departments</a>
+    <a href="#">Staff Directory</a>
+    <a href="#">News & Events</a>
+    <a href="#">Resources</a>
+    <a href="#">Faculty Executives</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Faculty of Computer & Information Engineering</h1>
+      <h2>CIESA — Computer & Information Engineering Students Association</h2>
+      <p>Empowering students with knowledge, innovation, and community. Explore programs, resources, and the latest updates in CIE.</p>
+      <div class="cta-buttons">
+        <a href="departments.html" class="btn">Explore Departments</a>
+        <a href="news.html" class="btn">Latest News</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS -->
+  <section class="quick-links">
+    <h2>Quick Access</h2>
+    <div class="cards">
+      <div class="card">
+        <h3><a href="departments.html">Departments</a> </h3>
+        <p>View faculty departments, programs, and academic structure.</p>
+      </div>
+      <div class="card">
+        <h3>Staff Directory</h3>
+        <p>Find lecturers, staff profiles, and contact information.</p>
+      </div>
+      <div class="card">
+        <h3>News & Events</h3>
+        <p>Stay updated with activities, announcements, and upcoming events.</p>
+      </div>
+      <div class="card">
+        <h3>Faculty Executives</h3>
+        <p>Meet the student leaders serving the CIE community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Federal University of Oye-Ekiti</p>
+      <p>Faculty of Computer & Information Engineering (CIE)</p>
+      <p>CIESA — Computer & Information Engineering Students Association</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
